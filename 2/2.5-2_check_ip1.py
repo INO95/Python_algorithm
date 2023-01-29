@@ -35,5 +35,5 @@ def validIpAdress(IP) -> str:
     return 'Neither'
 
 
-# 날ㅋ먹
+# 날ㅋ먹ㅋ
 print(validIpAdress(str2))
