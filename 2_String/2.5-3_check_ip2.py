@@ -1,6 +1,9 @@
 import re
 str = '172.0.13.20'
 str2 = '2020:0bc3:0:0:853e:0777:1234'
+str3 = '256.256.256.256'
+str4 = '123.123.123.123.'
+str5 = '0.0.0.0'
 
 
 def validIPAdress(IP: str) -> str:
@@ -23,4 +26,4 @@ def validIPAdress(IP: str) -> str:
     return "Neither"
 
 
-print(validIPAdress(str2))
+print(validIPAdress(str5))
