@@ -102,4 +102,4 @@ linked_list.remove(13)
 linked_list.remove_node(11)
 
 linked_list.traverse()
-# 날먹ㅋ8
+# 날먹ㅋ9
