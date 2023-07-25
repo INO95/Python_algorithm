@@ -12,11 +12,12 @@ n = 4
 def makeArray(nums1, nums2, m, n):
     index = 0
     for i in range(0, len(nums1)):
-        if (i > n):
+        if i > n:
             nums1[i] = nums2[index]
             index += 1
 
     return sorted(nums1)
+
 
 # print(makeArray(nums1, nums2, m, n))
 
@@ -27,6 +28,7 @@ def makeArrayByEnumerate(nums1, nums2, m, n):
     for i, v in enumerate(nums2):
         nums1[m + i] = v
     nums1[:] = sorted(nums1)
+
 
 # makeArrayByEnumerate(nums1, nums2, m, n)
 # print(nums1)

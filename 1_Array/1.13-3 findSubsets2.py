@@ -1,4 +1,5 @@
-# using binary
+# using binary -> 2진수 변환
+# 복습 요망
 
 nums = [1, 2, 3]
 

@@ -1,3 +1,5 @@
+# 주어진 단어가 이차원 배열 안에서 연결되는 단어인지 판단
+
 board = [
     ["A", "B", "C", "E"],
     ["S", "F", "S", "D"],
@@ -31,6 +33,8 @@ def exist(board, word) -> bool:
         return False
 
     res = False
+
+    # 처음에 먼저 실행되는 함수
     for x in range(len(board)):
         for y in range(len(board[0])):
             if board[x][y] == word[0] and \
