@@ -16,12 +16,13 @@ m = 4
 n = 2
 
 
-def merge(nums1, nums2, m, n):
+def merge(nums1, nums2):
     for i, nums1_item in enumerate(nums1):
         if nums1_item > nums2[0]:
             nums1[i] = nums2[0]
             nums2[0] = nums1_item
 
+            # 배열 2의 정렬
             for k, item in enumerate(nums2[1:], start=1):
                 if nums1_item <= item:
                     nums2[k - 1] = nums1_item
@@ -30,6 +31,6 @@ def merge(nums1, nums2, m, n):
                 nums2[k] = nums1_item
 
 
-merge(nums1, nums2, m, n)
+merge(nums1, nums2)
 print(nums1)
 print(nums2)
