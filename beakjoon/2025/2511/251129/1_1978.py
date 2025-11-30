@@ -20,59 +20,59 @@
 
 # prototype 2
 
-# import sys
+import sys
 
-# n = int(sys.stdin.readline())
-# numbers = list(map(int, sys.stdin.readline().split()))
-# j = 0
-# cnt = 0
-# answers = []
-# for i in range(n):
-#     j = numbers[i]
-#     for j in range(numbers[i], 0, -1):
-#         if numbers[i] % j == 0:
-#             cnt += 1
-#         if cnt > 2:
-#             j = 0
-#             cnt = 0
-#             break
-#     if cnt == 2:
-#         answers.append(numbers[i])
-#         j = 0
-#         cnt = 0
-#     j = 0
-#     cnt = 0
-# print(len(answers))
+n = int(sys.stdin.readline())
+numbers = list(map(int, sys.stdin.readline().split()))
+j = 0
+cnt = 0
+answers = []
+for i in range(n):
+    j = numbers[i]
+    for j in range(numbers[i], 0, -1):
+        if numbers[i] % j == 0:
+            cnt += 1
+        if cnt > 2:
+            j = 0
+            cnt = 0
+            break
+    if cnt == 2:
+        answers.append(numbers[i])
+        j = 0
+        cnt = 0
+    j = 0
+    cnt = 0
+print(len(answers))
 
 
 # gemini's refactoring no 1
 
-# import sys
+import sys
 
-# n = int(sys.stdin.readline())
-# numbers = list(map(int, sys.stdin.readline().split()))
-# prime_count = 0
+n = int(sys.stdin.readline())
+numbers = list(map(int, sys.stdin.readline().split()))
+prime_count = 0
 
-# for num in numbers:
-#     # 1. Edge Case: 1 is not a prime number
-#     if num < 2:
-#         continue  # Skip to the next number
+for num in numbers:
+    # 1. Edge Case: 1 is not a prime number
+    if num < 2:
+        continue  # Skip to the next number
 
-#     # 2. Assume it is prime until proven otherwise
-#     is_prime = True
+    # 2. Assume it is prime until proven otherwise
+    is_prime = True
 
-#     # 3. Check from 2 up to num - 1
-#     #    (If num is 7, we check 2, 3, 4, 5, 6)
-#     for i in range(2, num):
-#         if num % i == 0:
-#             is_prime = False  # Found a divisor! Not prime.
-#             break  # Stop checking immediately
+    # 3. Check from 2 up to num - 1
+    #    (If num is 7, we check 2, 3, 4, 5, 6)
+    for i in range(2, num):
+        if num % i == 0:
+            is_prime = False  # Found a divisor! Not prime.
+            break  # Stop checking immediately
 
-#     # 4. If the flag is still True, count it
-#     if is_prime:
-#         prime_count += 1
+    # 4. If the flag is still True, count it
+    if is_prime:
+        prime_count += 1
 
-# print(prime_count)
+print(prime_count)
 
 # gemini's refactoring no 2 (master)
 
