@@ -12,3 +12,15 @@ numbers.sort()
 
 print(num_avg)
 print(numbers[2])
+
+# gemini
+
+# Read all 5 numbers in one line
+numbers = [int(sys.stdin.readline()) for _ in range(5)]
+
+# Sort them
+numbers.sort()
+
+# Calculate and Print
+print(sum(numbers) // 5)  # sum() does the addition for you
+print(numbers[2])
